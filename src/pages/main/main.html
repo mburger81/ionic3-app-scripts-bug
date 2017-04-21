@@ -1,0 +1,19 @@
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar>
+        <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list no-lines>
+            <button ion-item menuClose (click)="goToPage('Page1Page')"><ion-icon name="grid" item-left></ion-icon>Page1</button>
+            <button ion-item menuClose (click)="goToPage('Page2Page')"><ion-icon name="grid" item-left></ion-icon>Page2</button>
+            <button ion-item menuClose (click)="goToPage('Page3Page')"><ion-icon name="grid" item-left></ion-icon>Page3</button>
+            <button ion-item menuClose (click)="goToPage('Page4Page')"><ion-icon name="grid" item-left></ion-icon>Page4</button>
+            <button ion-item menuClose (click)="goToPage('Page5Page')"><ion-icon name="grid" item-left></ion-icon>Page5</button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav #content swipeBackEnabled="false"></ion-nav>
